@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'userpage.dart';
 class MonitoringPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -104,6 +105,20 @@ class MonitoringPage extends StatelessWidget {
                   textStyle: TextStyle(fontSize: 16),
                 ),
               ),
+              ElevatedButton.icon(
+                  onPressed: () {
+                     Navigator.push(
+                      context,
+                            MaterialPageRoute(builder: (context) => UserPage()),
+                          );
+                        },
+                        icon: Icon(Icons.person),
+                        label: Text('User'),
+                        style: ElevatedButton.styleFrom(
+                          padding: EdgeInsets.symmetric(horizontal: 50, vertical: 15),
+                          textStyle: TextStyle(fontSize: 16),
+                        ),
+                      ),
             ],
           ),
         ),
